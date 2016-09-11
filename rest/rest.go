@@ -18,7 +18,7 @@ type Service struct {
 func NewRestService() (s *Service) {
 	box, err := rice.FindBox("build")
 	if err != nil {
-		log.Critical("Cannot find webserver build directory. Did you build the webserver (npm run gulp)?")
+		log.Critical("Cannot find webserver build directory. Did you build the webserver (npm run buildDev?")
 		return
 	}
 	return &Service{
